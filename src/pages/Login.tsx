@@ -1,9 +1,13 @@
-import React from 'react';
+import React from "react";
+import NavBar from "../components/NavBar";
 
 function Login() {
   return (
-    <div>Login</div>
-  )
+    <div>
+      <NavBar />
+      <p> Login</p>
+    </div>
+  );
 }
 
 export default Login;

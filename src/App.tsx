@@ -5,6 +5,7 @@ import FindHospital from "./pages/FindHospital";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import ErrorPage from "./pages/ErrorPage";
+import NavBar from "./components/NavBar";
 import "./App.css";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
           <Route path="errorpage" element={<ErrorPage />} />
+          <Route path="navbar" element={<NavBar/> } />
         </Routes>
       </div>
     </>
