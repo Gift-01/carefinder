@@ -17,14 +17,20 @@
 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Button from "./Form/ButtonLink";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between flex-wrap p-6">
-      <div className="flex items-center flex-shrink-0 text-black mr-6 lg:mr-72">
-        <p>CareFinder</p>
+    <nav
+      className="flex items-center justify-between flex-wrap p-6  "
+      style={{ boxShadow: "0px 4px 4px rgba(14, 61, 183, 0.15)" }}
+    >
+      <div className="flex items-center flex-shrink-0 font-bold text-[35px]">
+        <Link to="/" style={{ color: "#08299B" }}>
+          CareFinder
+        </Link>
       </div>
       <div className="block lg:hidden">
         <button
@@ -48,37 +54,45 @@ function NavBar() {
         </button>
       </div>
       <div
-        className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${
+        className={`w-full block  lg:flex lg:items-center lg:w-auto ${
           isOpen ? "block" : "hidden"
         }`}
       >
-        <div className="text-sm lg:flex-grow">
+        <div className="text-sm lg:flex-grow p-[10px] md:w-[491px]">
           <Link
             to="/"
-            className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0 text-black text-[18px] font-medium mr-4 font-display"
           >
             Home
           </Link>
           <Link
             to="/about"
-            className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0 text-black text-[18px] font-medium mr-4 font-display"
           >
             About
           </Link>
           <Link
             to="/findhospital"
-            className="block mt-4 lg:inline-block lg:mt-0 text-white-200 mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0 text-black text-[18px] font-medium mr-4 font-display"
           >
             Find Hospital
           </Link>
         </div>
-        <div>
-          <button className="inline-flex items-center bg-amber-500 border-0 py-2 px-4 text-white">
+        <div className=" space-x-[19px]">
+          <Button
+            to="/login"
+            className="inline-flex items-center rounded-xl text-[20px] font-bold py-[7px] px-[31px] text-white font-display"
+            style={{ backgroundColor: "#08299B" }}
+          >
             Login
-          </button>
-          <button className="inline-flex items-center bg-amber-500 border-0 py-2 px-4 text-white">
-            Sign up
-          </button>
+          </Button>
+          <Button
+            to="/signup"
+            className="inline-flex items-center rounded-xl text-[20px] font-bold py-[7px] px-[31px] text-white font-display"
+            style={{ backgroundColor: "#08299B" }}
+          >
+            Signup
+          </Button>
         </div>
       </div>
     </nav>
