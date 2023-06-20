@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Button from "./Form/ButtonLink";
-import Nurse from "../assets/Nurse.svg";
-import Input from "./Form/Input";
+import Button from "../Form/ButtonLink";
+import Nurse from "../../assets/Nurse.svg";
+import Input from "../Form/Input";
 import { Link } from "react-router-dom";
 import { HiArrowSmRight } from "react-icons/hi";
 
@@ -14,7 +14,7 @@ const HomeBase: React.FC = () => {
   return (
     <div style={{ backgroundColor: "#E0E4EC " }}>
       <div className="block md:flex py-14 w-full">
-        <div className="w-1/2  items-center my-[45px]">
+        <div className=" md:w-1/2  items-center my-[45px]">
           <p
             style={{ color: "#08299B" }}
             className="md:font-bold md:text-[40px] text-center"
@@ -50,6 +50,7 @@ const HomeBase: React.FC = () => {
           onChange={handleInputChange}
           placeholder="Federal Medical Center,Ebutta Meta,Lagos state"
           icon={HiArrowSmRight}
+          className="md:w-[600px]"
         />
       </div>
     </div>

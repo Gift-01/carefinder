@@ -1,13 +1,16 @@
 import React from "react";
 import NavBar from "../components/NavBar";
-import HomePage from "../components/HomePage";
+import HomePage from "../components/Home/HomePage";
+import WelcomePage from "../components/Home/WelcomePage";
+import Services from "../components/Home/services";
 
 function Home() {
   return (
     <div>
       <NavBar />
-      <HomePage/>
-      <p>Home</p>
+      <HomePage />
+      <WelcomePage />
+      <Services />
     </div>
   );
 }

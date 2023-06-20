@@ -20,7 +20,7 @@ const Input: React.FC<InputProps> = ({
     onChange(event.target.value);
   };
 
-  const inputClassName = `border rounded-md px-4 py-2 ${className}`;
+  const inputClassName = `border rounded-2xl px-4 py-2 ${className}`;
 
   return (
     <div>
