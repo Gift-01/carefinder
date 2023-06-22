@@ -33,7 +33,7 @@ const HomeBase: React.FC = () => {
               GET STARTED
             </Button>
             <Link to="#" className="italic">
-              Learn More <HiArrowSmRight />
+              Learn More 
             </Link>
           </div>
         </div>
