@@ -7,6 +7,7 @@ interface InputProps {
   placeholder?: string;
   icon?: IconType;
   className?: string;
+  type: string;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -15,6 +16,7 @@ const Input: React.FC<InputProps> = ({
   placeholder,
   icon: Icon,
   className,
+  type,
 }) => {
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     onChange(event.target.value);
@@ -26,7 +28,7 @@ const Input: React.FC<InputProps> = ({
     <div>
       {Icon && <Icon className="inline-block mr-2" />}
       <input
-        type="text"
+        type={type}
         value={value}
         onChange={handleChange}
         placeholder={placeholder}

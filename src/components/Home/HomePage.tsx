@@ -46,6 +46,7 @@ const HomeBase: React.FC = () => {
           Find a nearby Hospital
         </p>
         <Input
+          type="text"
           value={value}
           onChange={handleInputChange}
           placeholder="Federal Medical Center,Ebutta Meta,Lagos state"
