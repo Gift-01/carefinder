@@ -5,35 +5,41 @@ interface InputProps {
   value: string;
   onChange: (value: string) => void;
   placeholder?: string;
-  icon?: IconType;
+  iconLeft?: IconType | string;
+  iconRight?: IconType | string;
   className?: string;
   type: string;
+  disabled?: boolean;
 }
 
 const Input: React.FC<InputProps> = ({
   value,
   onChange,
   placeholder,
-  icon: Icon,
+  iconLeft: IconLeft,
+  iconRight: IconRight,
   className,
+  disabled,
   type,
 }) => {
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     onChange(event.target.value);
   };
 
-  const inputClassName = `border rounded-2xl px-4 py-2 ${className}`;
+  const inputClassName = `border flex items-center bg-[#fff] rounded-2xl pl-[15px] pr-[38px] ${className}`;
 
   return (
-    <div>
-      {Icon && <Icon className="inline-block mr-2" />}
+    <div className={inputClassName}>
+      {IconLeft && <IconLeft className="inline-block mr-[66px]" />}
       <input
         type={type}
         value={value}
         onChange={handleChange}
         placeholder={placeholder}
-        className={inputClassName}
+        className="w-full outline-none h-inherit bg-inherit"
+        disabled={disabled}
       />
+      {IconRight && <IconRight className="inline-block" />}
     </div>
   );
 };

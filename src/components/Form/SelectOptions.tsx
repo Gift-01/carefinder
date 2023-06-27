@@ -33,10 +33,17 @@ const Select: React.FC<SelectProps> = ({
       <select
         value={value}
         onChange={handleChange}
-        className={`select-input ${placeholder && !value ? "placeholder" : ""}`}
+        className={`select-input w-full h-full bg-inherit rounded-[12px] ${
+          placeholder && !value ? "placeholder placeholder:text-[#837D7D]" : ""
+        }`}
       >
         {placeholder && (
-          <option value="" disabled hidden>
+          <option
+            className={`text-[#837D7D !important]`}
+            value=""
+            disabled
+            hidden
+          >
             {placeholder}
           </option>
         )}

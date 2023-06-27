@@ -6,11 +6,11 @@ import Share from "../../assets/Share_Icon.svg";
 
 function Services() {
   return (
-    <div className="my-[50px] mx-[15px] md:mx-[2px] w-full ">
-      <div className="flex flex-col md:flex-row justify-center gap-[20px]  ">
+    <div className="my-[50px] md:mx-[2px] w-full ">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-[20px]  ">
         <div
           style={{ backgroundColor: "#E0E4EC" }}
-          className="w-[345px] rounded-xl p-[20px]"
+          className="w-[345px] h-[250px] rounded-xl p-[20px]"
         >
           <img src={Hospital} alt="Nurse and patient" className="mx-[100px]" />
 
@@ -19,7 +19,7 @@ function Services() {
         </div>
         <div
           style={{ backgroundColor: "#E0E4EC" }}
-          className="w-[345px] rounded-xl  p-[20px]"
+          className="w-[345px] h-[250px] rounded-xl  p-[20px]"
         >
           <img src={Doctor} alt="Nurse and patient" className="mx-[100px] " />
           <h2 className="font-bold my-[13px]">Search Doctors</h2>
@@ -27,7 +27,7 @@ function Services() {
         </div>
         <div
           style={{ backgroundColor: "#E0E4EC" }}
-          className="w-[345px] rounded-xl  p-[20px]"
+          className="w-[345px] h-[250px] rounded-xl  p-[20px]"
         >
           <img src={Export} alt="Nurse and patient" className="mx-[100px] " />
           <h2 className="font-bold my-[13px]">Export Doctors</h2>
@@ -35,7 +35,7 @@ function Services() {
         </div>
         <div
           style={{ backgroundColor: "#E0E4EC" }}
-          className="w-[345px]  rounded-xl  p-[20px]"
+          className="w-[345px] h-[250px] rounded-xl  p-[20px]"
         >
           <img src={Share} alt="Nurse and patient" className="mx-[100px]" />
           <h2 className="font-bold my-[13px]">Share Doctors</h2>

@@ -4,6 +4,7 @@ export default {
   theme: {
     fontFamily: {
       display: ["DM Sans", "sans-serif"],
+      body: ['"DM Sans"'],
     },
   },
   plugins: [],

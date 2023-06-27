@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Button from "../Form/ButtonLink";
 import Nurse from "../../assets/Nurse.svg";
 import Input from "../Form/Input";
-import { Link } from "react-router-dom";
-import { HiArrowSmRight } from "react-icons/hi";
+import { ReactComponent as SearchIcon } from "../../assets/Search.svg";
+import { ReactComponent as LocationIcon } from "../../assets/Location.svg";
 
 const HomeBase: React.FC = () => {
   const [value, setValue] = useState("");
@@ -33,7 +34,7 @@ const HomeBase: React.FC = () => {
               GET STARTED
             </Button>
             <Link to="#" className="italic">
-              Learn More 
+              Learn More
             </Link>
           </div>
         </div>
@@ -45,14 +46,17 @@ const HomeBase: React.FC = () => {
         <p className="text-[25px] " style={{ color: "#08299B" }}>
           Find a nearby Hospital
         </p>
-        <Input
-          type="text"
-          value={value}
-          onChange={handleInputChange}
-          placeholder="Federal Medical Center,Ebutta Meta,Lagos state"
-          icon={HiArrowSmRight}
-          className="md:w-[600px]"
-        />
+        <div className="w-full flex justify-center items-center">
+          <Input
+            type="text"
+            value={value}
+            onChange={handleInputChange}
+            placeholder="Federal Medical Center,Ebutta Meta,Lagos state"
+            iconLeft={LocationIcon}
+            className="md:w-[600px]"
+            iconRight={SearchIcon}
+          />
+        </div>
       </div>
     </div>
   );
