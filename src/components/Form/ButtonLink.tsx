@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes } from "react";
+import { ButtonHTMLAttributes } from "react";
 import { Link, LinkProps } from "react-router-dom";
 
 type ButtonLinkProps = ButtonHTMLAttributes<HTMLButtonElement> & LinkProps;

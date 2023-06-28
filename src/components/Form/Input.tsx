@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FunctionComponent, SVGProps } from "react";
+import { ChangeEvent, FunctionComponent, SVGProps } from "react";
 import { IconType } from "react-icons";
 
 interface InputProps {

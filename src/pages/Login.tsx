@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import AuthLayout from "../layouts/auth";
 import Input from "../components/Form/Input";
@@ -21,7 +20,7 @@ function Login() {
           value=""
           onChange={(e) => console.log(e)}
           type="email"
-          className="bg-[#E0E4EC] w-full"
+          className="bg-[#E0E4EC] w-full h-[64px]"
           placeholder="Enter Email Address"
         />
 
@@ -30,7 +29,7 @@ function Login() {
           value=""
           onChange={(e) => console.log(e)}
           type="password"
-          className="bg-[#E0E4EC] w-full"
+          className="bg-[#E0E4EC] w-full h-[64px]"
           placeholder="Enter Password"
           iconRight={PasswordLocked}
         />

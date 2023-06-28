@@ -1,4 +1,3 @@
-import React from "react";
 import BackgroundImage from "../../assets/Background.svg";
 import Appointment from "../../assets/Appointment_Icon.svg";
 import Phone from "../../assets/Phone.svg";

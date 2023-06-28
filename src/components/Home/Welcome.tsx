@@ -1,4 +1,3 @@
-import React from "react";
 import Patient from "../../assets/Patient.svg";
 import Doctor from "../../assets/DoctorAndPatient.svg";
 import Button from "../Form/ButtonLink";

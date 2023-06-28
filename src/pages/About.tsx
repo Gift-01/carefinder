@@ -1,5 +1,4 @@
-import React from 'react';
-import NavBar from '../components/NavBar';
+import NavBar from "../components/NavBar";
 
 function About() {
   return (
@@ -7,7 +6,7 @@ function About() {
       <NavBar />
       <p>About</p>
     </div>
-  )
+  );
 }
 
 export default About;

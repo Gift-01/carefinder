@@ -1,4 +1,3 @@
-import React from "react";
 import Doctor from "../../assets/Doctor.svg";
 import Hospital from "../../assets/Hospital.svg";
 import Export from "../../assets/Export_Icon.svg";

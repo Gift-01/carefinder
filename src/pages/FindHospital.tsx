@@ -1,4 +1,3 @@
-import React from "react";
 import Map from "../assets/Map.png";
 import Input from "../components/Form/Input";
 import SearchIcon from "../assets/Search2.svg";

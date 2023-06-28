@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "../Form/ButtonLink";
 import Nurse from "../../assets/Nurse.svg";
@@ -53,7 +53,7 @@ const HomeBase: React.FC = () => {
             onChange={handleInputChange}
             placeholder="Federal Medical Center,Ebutta Meta,Lagos state"
             iconLeft={LocationIcon}
-            className="md:w-[600px] h-[64px]"
+            className="md:w-[600px] h-[64px] bg-[#fff]"
             iconRight={SearchIcon}
           />
         </div>

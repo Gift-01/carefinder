@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import Select from "../Form/SelectOptions";
 import Input from "../Form/Input";
 import DoctorOne from "../../assets/DoctorProfile.svg";

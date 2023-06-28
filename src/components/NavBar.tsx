@@ -1,21 +1,4 @@
-// import React from "react";
-// import { Link } from "react-router-dom";
-
-// function NavBar() {
-//   return (
-//     <div className="bg-black">
-//       <Link to="/" className="bg-">Home</Link>
-//       <Link to="/about"> About</Link>
-//       <Link to="/findhospital">Find Hospital</Link>
-//       <Link to="/login">Login</Link>
-//       <Link to="/signup">Sign up</Link>
-//     </div>
-//   );
-// }
-
-// export default NavBar;
-
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "./Form/ButtonLink";
 

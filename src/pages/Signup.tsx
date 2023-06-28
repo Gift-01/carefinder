@@ -1,5 +1,3 @@
-import React from "react";
-import NavBar from "../components/NavBar";
 import AuthLayout from "../layouts/auth";
 import Input from "../components/Form/Input";
 import { ReactComponent as PasswordLocked } from "../assets/PasswordLocked.svg";
@@ -22,7 +20,7 @@ function Signup() {
           value=""
           onChange={(e) => console.log(e)}
           type="text"
-          className="bg-[#E0E4EC] w-full"
+          className="bg-[#E0E4EC] w-full h-[64px]"
           placeholder="Enter Email Address"
         />
 
@@ -31,7 +29,7 @@ function Signup() {
           value=""
           onChange={(e) => console.log(e)}
           type="email"
-          className="bg-[#E0E4EC] w-full"
+          className="bg-[#E0E4EC] w-full h-[64px]"
           placeholder="Enter Email Address"
         />
 
@@ -40,7 +38,7 @@ function Signup() {
           value=""
           onChange={(e) => console.log(e)}
           type="password"
-          className="bg-[#E0E4EC] w-full"
+          className="bg-[#E0E4EC] w-full h-[64px]"
           placeholder="Enter Password"
           iconRight={PasswordLocked}
         />

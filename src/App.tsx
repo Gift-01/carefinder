@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import FindHospital from "./pages/findHospital";
-import SingleHospitalPage from "./pages/singleHospitalPage";
+import FindHospital from "./pages/FindHospital";
+import SingleHospitalPage from "./pages/SingleHospital";
 import Login from "./pages/Login";
-import Signup from "./pages/signUp";
-import ErrorPage from "./pages/errorPage";
+import Signup from "./pages/Signup";
+import ErrorPage from "./pages/ErrorPage";
 import Library from "./pages/Library";
 import Profile from "./pages/Profile";
 import NavBar from "./components/NavBar";
