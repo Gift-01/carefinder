@@ -22,7 +22,7 @@ function FindHospital() {
             onChange={(e) => console.log(e)}
             value=""
             placeholder="Address"
-            className="w-full lg:w-[587px] h-[46px]"
+            className="w-full bg-[#fff] lg:w-[587px] h-[46px]"
           />
 
           <div className="flex flex-col gap-y-[20px] lg:flex-row items-center justify-between">
@@ -31,11 +31,11 @@ function FindHospital() {
               onChange={(e) => console.log(e)}
               value=""
               placeholder="Zipcode"
-              className="w-full lg:w-[224px] h-[44px]"
+              className="w-full bg-[#fff] lg:w-[224px] h-[44px]"
             />
 
             <div className="flex items-center mr-[17px]">
-              <button className="w-[76px] mr-[23px] h-[46px] flex justify-center items-center bg-[#08299B] rounded-[15px]">
+              <button className="w-[76px] ml-[13px] mr-[23px] h-[46px] flex justify-center items-center bg-[#08299B] rounded-[15px]">
                 <img src={SearchIcon} alt="search" />
               </button>
               <img src={ProfilePhoto} alt="photo" />

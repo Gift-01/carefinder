@@ -75,7 +75,7 @@ const BookAppointment: React.FC = () => {
             onChange={handleInputChange}
             placeholder="Address"
             iconRight={Location}
-            className="md:w-[466.26px] bg-[#E0E4EC] mb-[37px] pr-[22.54px]"
+            className="md:w-[466.26px] h-[59px] bg-[#E0E4EC] mb-[37px] pr-[22.54px]"
           />
           <div className="self-start mb-[37px] w-full md:w-[466.26px]">
             <Select
@@ -100,7 +100,7 @@ const BookAppointment: React.FC = () => {
             value={value}
             onChange={handleInputChange}
             placeholder="Enter Name"
-            className="md:w-[466.26px] bg-[#E0E4EC] mb-[37px]"
+            className="md:w-[466.26px] h-[59px] bg-[#E0E4EC] mb-[37px]"
           />
 
           <Input
@@ -108,21 +108,21 @@ const BookAppointment: React.FC = () => {
             value={value}
             onChange={handleInputChange}
             placeholder="Enter Email"
-            className="w-full md:w-[466.26px] bg-[#E0E4EC] mb-[37px]"
+            className="w-full md:w-[466.26px] h-[59px] bg-[#E0E4EC] mb-[37px]"
           />
           <Input
             type="date"
             value={value}
             onChange={handleInputChange}
             placeholder="Select Date"
-            className="w-full md:w-[466.26px] bg-[#E0E4EC] mb-[37px] pr-[25.15px]"
+            className="w-full md:w-[466.26px] h-[59px] bg-[#E0E4EC] mb-[37px] pr-[25.15px]"
           />
           <Input
             type="time"
             value={value}
             onChange={handleInputChange}
             placeholder="Select Time"
-            className="w-full md:w-[466.26px] bg-[#E0E4EC] pr-[25.15px]"
+            className="w-full md:w-[466.26px] h-[59px] bg-[#E0E4EC] pr-[25.15px]"
           />
           <div className="flex mt-[20px] md:mt-[40px] mb-[30px] justify-center">
             <button className="w-full md:w-[429px] h-[70px] rounded-[25px] bg-[#08299B] text-[#fff] text-[15px] md:text-[30px] leading-[150%]">

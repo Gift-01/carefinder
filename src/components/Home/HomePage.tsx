@@ -53,7 +53,7 @@ const HomeBase: React.FC = () => {
             onChange={handleInputChange}
             placeholder="Federal Medical Center,Ebutta Meta,Lagos state"
             iconLeft={LocationIcon}
-            className="md:w-[600px]"
+            className="md:w-[600px] h-[64px]"
             iconRight={SearchIcon}
           />
         </div>

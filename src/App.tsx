@@ -6,6 +6,8 @@ import SingleHospitalPage from "./pages/singleHospitalPage";
 import Login from "./pages/Login";
 import Signup from "./pages/signUp";
 import ErrorPage from "./pages/errorPage";
+import Library from "./pages/Library";
+import Profile from "./pages/Profile";
 import NavBar from "./components/NavBar";
 import "./App.css";
 
@@ -22,6 +24,8 @@ function App() {
           <Route path="signup" element={<Signup />} />
           <Route path="errorpage" element={<ErrorPage />} />
           <Route path="navbar" element={<NavBar />} />
+          <Route path="library" element={<Library />} />
+          <Route path="profile" element={<Profile />} />
         </Routes>
       </div>
     </>

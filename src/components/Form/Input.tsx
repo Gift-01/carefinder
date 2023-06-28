@@ -1,12 +1,22 @@
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, FunctionComponent, SVGProps } from "react";
 import { IconType } from "react-icons";
 
 interface InputProps {
   value: string;
   onChange: (value: string) => void;
   placeholder?: string;
-  iconLeft?: IconType | string;
-  iconRight?: IconType | string;
+  iconLeft?:
+    | IconType
+    | string
+    | FunctionComponent<
+        SVGProps<SVGSVGElement> & { title?: string | undefined }
+      >;
+  iconRight?:
+    | IconType
+    | string
+    | FunctionComponent<
+        SVGProps<SVGSVGElement> & { title?: string | undefined }
+      >;
   className?: string;
   type: string;
   disabled?: boolean;
@@ -26,7 +36,7 @@ const Input: React.FC<InputProps> = ({
     onChange(event.target.value);
   };
 
-  const inputClassName = `border flex items-center bg-[#fff] rounded-2xl pl-[15px] pr-[38px] ${className}`;
+  const inputClassName = `border flex items-center rounded-2xl pl-[15px] pr-[38px] ${className}`;
 
   return (
     <div className={inputClassName}>

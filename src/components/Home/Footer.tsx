@@ -9,20 +9,34 @@ const Footer = () => {
         <p>Victoria island, Lagos</p>
         <p>+2349167351788</p>
       </div>
-      <div className="text-left md:ml-[70px]">
-        <h4 className="text-[#08299B] text-[30px] leading-[150%] -tracking-[0.33px]">
+      <div className="text-left md:ml-[70px] flex flex-col">
+        <a
+          href="#"
+          className="text-[#08299B] text-[30px] leading-[150%] -tracking-[0.33px]"
+        >
           About Us
-        </h4>
-        <p className="text-[15px]">News & Media</p>
-        <p className="text-[15px]">Contact Us</p>
+        </a>
+        <a href="#" className="text-[15px]">
+          News & Media
+        </a>
+        <a className="text-[15px]">Contact Us</a>
       </div>
-      <div className="text-left">
-        <h4 className="text-[#08299B] text-[30px] leading-[150%] -tracking-[0.33px]">
+      <div className="text-left flex flex-col">
+        <a
+          href="#"
+          className="text-[#08299B] text-[30px] leading-[150%] -tracking-[0.33px]"
+        >
           Quick Links
-        </h4>
-        <p className="text-[15px]">My account</p>
-        <p className="text-[15px]">Book an appointment</p>
-        <p className="text-[15px]">Library</p>
+        </a>
+        <a href="/profile" className="text-[15px]">
+          My account
+        </a>
+        <a href="/findhospital" className="text-[15px]">
+          Book an appointment
+        </a>
+        <a href="/library" className="text-[15px]">
+          Library
+        </a>
       </div>
     </div>
   );
