@@ -2,7 +2,7 @@ import { ChangeEvent, FunctionComponent, SVGProps } from "react";
 import { IconType } from "react-icons";
 
 interface InputProps {
-  value: string;
+  value?: string;
   onChange: (value: string) => void;
   placeholder?: string;
   iconLeft?:

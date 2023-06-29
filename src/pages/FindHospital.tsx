@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Map from "../assets/Map.png";
 import Input from "../components/Form/Input";
 import SearchIcon from "../assets/Search2.svg";
@@ -8,7 +9,34 @@ import Hospital3 from "../assets/Hospital3.png";
 import Hospital4 from "../assets/Hospital4.png";
 import { useNavigate } from "react-router-dom";
 
-function FindHospital() {
+const FindHospital: React.FC = () => {
+  const [value, setValue] = useState("");
+
+  const handleInputChange = (newValue: string) => {
+    setValue(newValue);
+  };
+  const [error, setError] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    fetch("https://care-finder.onrender.com/hospitals?search=herb")
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          setIsLoaded(true);
+          setItems(result);
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        (error) => {
+          setIsLoaded(true);
+          setError(error);
+        }
+      );
+  }, []);
+
   return (
     <div className="min-h-screen">
       <div
@@ -18,8 +46,7 @@ function FindHospital() {
         <div className="absolute top-[90px] flex flex-col gap-y-[15px] lg:flex-row lg:items-center justify-between w-full px-[15px] lg:px-unset lg:pl-[102px]">
           <Input
             type="text"
-            onChange={(e) => console.log(e)}
-            value=""
+            onChange={handleInputChange}
             placeholder="Address"
             className="w-full bg-[#fff] lg:w-[587px] h-[46px]"
           />
@@ -27,8 +54,7 @@ function FindHospital() {
           <div className="flex flex-col gap-y-[20px] lg:flex-row items-center justify-between">
             <Input
               type="text"
-              onChange={(e) => console.log(e)}
-              value=""
+              onChange={handleInputChange}
               placeholder="Zipcode"
               className="w-full bg-[#fff] lg:w-[224px] h-[44px]"
             />
@@ -107,7 +133,7 @@ function FindHospital() {
       </div>
     </div>
   );
-}
+};
 
 const FindHospitalCard = ({
   image,

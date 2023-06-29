@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import Select from "../Form/SelectOptions";
 import Input from "../Form/Input";
 import DoctorOne from "../../assets/DoctorProfile.svg";
@@ -71,7 +71,6 @@ const BookAppointment: React.FC = () => {
           </div>
           <Input
             type="text"
-            value={value}
             onChange={handleInputChange}
             placeholder="Address"
             iconRight={Location}
@@ -97,7 +96,6 @@ const BookAppointment: React.FC = () => {
           </div>
           <Input
             type="email"
-            value={value}
             onChange={handleInputChange}
             placeholder="Enter Name"
             className="md:w-[466.26px] h-[59px] bg-[#E0E4EC] mb-[37px]"
@@ -105,21 +103,18 @@ const BookAppointment: React.FC = () => {
 
           <Input
             type="email"
-            value={value}
             onChange={handleInputChange}
             placeholder="Enter Email"
             className="w-full md:w-[466.26px] h-[59px] bg-[#E0E4EC] mb-[37px]"
           />
           <Input
             type="date"
-            value={value}
             onChange={handleInputChange}
             placeholder="Select Date"
             className="w-full md:w-[466.26px] h-[59px] bg-[#E0E4EC] mb-[37px] pr-[25.15px]"
           />
           <Input
             type="time"
-            value={value}
             onChange={handleInputChange}
             placeholder="Select Time"
             className="w-full md:w-[466.26px] h-[59px] bg-[#E0E4EC] pr-[25.15px]"
