@@ -19,13 +19,33 @@ const FindHospital: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
 
-  useEffect(() => {
-    fetch("https://care-finder.onrender.com/hospitals?search=herb")
+  // useEffect(() => {
+  //   fetch("https://care-finder.onrender.com/hospitals?search=herb")
+  //     .then((res) => res.json())
+  //     .then(
+  //       (result) => {
+  //         setIsLoaded(true);
+  //         setItems(result);
+  //       },
+  //       // Note: it's important to handle errors here
+  //       // instead of a catch() block so that we don't swallow
+  //       // exceptions from actual bugs in components.
+  //       (error) => {
+  //         setIsLoaded(true);
+  //         setError(error);
+  //       }
+  //     );
+  // }, []);
+
+  const fetchHospital = (searchText: string) => {
+    console.log("searching", searchText)
+    fetch(`https://care-finder.onrender.com/v1/hospitals?search=${searchText}`)
       .then((res) => res.json())
       .then(
         (result) => {
+          console.log({result})
           setIsLoaded(true);
-          setItems(result);
+          setItems(result.data);
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow
@@ -35,7 +55,7 @@ const FindHospital: React.FC = () => {
           setError(error);
         }
       );
-  }, []);
+  };
 
   return (
     <div className="min-h-screen">
@@ -46,7 +66,9 @@ const FindHospital: React.FC = () => {
         <div className="absolute top-[90px] flex flex-col gap-y-[15px] lg:flex-row lg:items-center justify-between w-full px-[15px] lg:px-unset lg:pl-[102px]">
           <Input
             type="text"
-            onChange={handleInputChange}
+            onChange={(e: any) =>
+              fetchHospital(e as string)
+            }
             placeholder="Address"
             className="w-full bg-[#fff] lg:w-[587px] h-[46px]"
           />
@@ -74,61 +96,14 @@ const FindHospital: React.FC = () => {
         </h4>
 
         <div className="flex flex-wrap justify-between lg:px-[100px] gap-y-[25px] pb-[70px]">
-          <FindHospitalCard
-            image={Hospital1}
-            hospitalName="Eve Foundation"
-            hospitalAddress="Hospital 32, Admiralty way"
-            index={1}
-          />
-
-          <FindHospitalCard
-            image={Hospital2}
-            hospitalName="Nigerian Police Hospital"
-            hospitalAddress="Falomo"
-            index={2}
-          />
-
-          <FindHospitalCard
-            image={Hospital3}
-            hospitalName="Gold cross Hospital"
-            hospitalAddress="Bourdillon Road"
-            index={3}
-          />
-
-          <FindHospitalCard
-            image={Hospital4}
-            hospitalName="Mayo Clinic"
-            hospitalAddress="12, Femi Okunnu Road"
-            index={4}
-          />
-
-          <FindHospitalCard
-            image={Hospital1}
-            hospitalName="Eve Foundation"
-            hospitalAddress="Hospital 32, Admiralty way"
-            index={5}
-          />
-
-          <FindHospitalCard
-            image={Hospital2}
-            hospitalName="Nigerian Police Hospital"
-            hospitalAddress="Falomo"
-            index={6}
-          />
-
-          <FindHospitalCard
-            image={Hospital3}
-            hospitalName="Gold cross Hospital"
-            hospitalAddress="Bourdillon Road"
-            index={7}
-          />
-
-          <FindHospitalCard
-            image={Hospital4}
-            hospitalName="Mayo Clinic"
-            hospitalAddress="12, Femi Okunnu Road"
-            index={8}
-          />
+          {items.map((item: any) => (
+            <FindHospitalCard
+              image={item}
+              hospitalName={item.name}
+              hospitalAddress={item.address}
+              index={1}
+            />
+          ))}
         </div>
       </div>
     </div>
@@ -185,3 +160,6 @@ const FindHospitalCard = ({
 };
 
 export default FindHospital;
+function fetchHospital() {
+  throw new Error("Function not implemented.");
+}
