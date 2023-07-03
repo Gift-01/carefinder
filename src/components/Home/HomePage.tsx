@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Button from "../Form/ButtonLink";
 import Nurse from "../../assets/Nurse.svg";
@@ -7,11 +8,24 @@ import { ReactComponent as SearchIcon } from "../../assets/Search.svg";
 import { ReactComponent as LocationIcon } from "../../assets/Location.svg";
 
 const HomeBase: React.FC = () => {
+  const navigate = useNavigate();
+
   const [value, setValue] = useState("");
 
   const handleInputChange = (newValue: string) => {
     setValue(newValue);
   };
+  const HandlekeyPress = (e: { key: string; which: number }) => {
+    if (e.key === "Enter") {
+      // alert("You pressed enter!");
+      navigate("/findhospital/" + value);
+    }
+  };
+
+  // function HandleKeyPress(): void {
+  //   throw new Error("Function not implemented.");
+  // }
+
   return (
     <div style={{ backgroundColor: "#E0E4EC " }}>
       <div className="block md:flex py-14 w-full">
@@ -50,6 +64,7 @@ const HomeBase: React.FC = () => {
           <Input
             type="text"
             value={value}
+            onKeyDownEnter={HandlekeyPress}
             onChange={handleInputChange}
             placeholder="Federal Medical Center,Ebutta Meta,Lagos state"
             iconLeft={LocationIcon}

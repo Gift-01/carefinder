@@ -3,14 +3,14 @@ import Map from "../assets/Map.png";
 import Input from "../components/Form/Input";
 import SearchIcon from "../assets/Search2.svg";
 import ProfilePhoto from "../assets/ProfilePhoto.png";
-import Hospital1 from "../assets/Hospital1.png";
-import Hospital2 from "../assets/Hospital2.png";
-import Hospital3 from "../assets/Hospital3.png";
-import Hospital4 from "../assets/Hospital4.png";
 import { useNavigate } from "react-router-dom";
 
 const FindHospital: React.FC = () => {
   const [value, setValue] = useState("");
+
+  const HandleKeyPress: any = (): void => {
+    throw new Error("Function not implemented.");
+  };
 
   const handleInputChange = (newValue: string) => {
     setValue(newValue);
@@ -38,12 +38,12 @@ const FindHospital: React.FC = () => {
   // }, []);
 
   const fetchHospital = (searchText: string) => {
-    console.log("searching", searchText)
+    console.log("searching", searchText);
     fetch(`https://care-finder.onrender.com/v1/hospitals?search=${searchText}`)
       .then((res) => res.json())
       .then(
         (result) => {
-          console.log({result})
+          console.log({ result });
           setIsLoaded(true);
           setItems(result.data);
         },
@@ -66,15 +66,15 @@ const FindHospital: React.FC = () => {
         <div className="absolute top-[90px] flex flex-col gap-y-[15px] lg:flex-row lg:items-center justify-between w-full px-[15px] lg:px-unset lg:pl-[102px]">
           <Input
             type="text"
-            onChange={(e: any) =>
-              fetchHospital(e as string)
-            }
+            onKeyDownEnter={HandleKeyPress}
+            onChange={(e: string) => fetchHospital(e as string)}
             placeholder="Address"
             className="w-full bg-[#fff] lg:w-[587px] h-[46px]"
           />
 
           <div className="flex flex-col gap-y-[20px] lg:flex-row items-center justify-between">
             <Input
+              onKeyDownEnter={HandleKeyPress}
               type="text"
               onChange={handleInputChange}
               placeholder="Zipcode"

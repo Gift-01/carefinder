@@ -1,9 +1,10 @@
-import { ChangeEvent, FunctionComponent, SVGProps } from "react";
+import { ChangeEvent, KeyboardEvent, FunctionComponent, SVGProps } from "react";
 import { IconType } from "react-icons";
 
 interface InputProps {
   value?: string;
   onChange: (value: string) => void;
+  onKeyDownEnter: () => void;
   placeholder?: string;
   iconLeft?:
     | IconType
@@ -25,6 +26,7 @@ interface InputProps {
 const Input: React.FC<InputProps> = ({
   value,
   onChange,
+  onKeyDownEnter,
   placeholder,
   iconLeft: IconLeft,
   iconRight: IconRight,
@@ -36,6 +38,12 @@ const Input: React.FC<InputProps> = ({
     onChange(event.target.value);
   };
 
+  const handleKeyPress = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      onKeyDownEnter();
+    }
+  };
+
   const inputClassName = `border flex items-center rounded-2xl pl-[15px] pr-[38px] ${className}`;
 
   return (
@@ -45,6 +53,7 @@ const Input: React.FC<InputProps> = ({
         type={type}
         value={value}
         onChange={handleChange}
+        onKeyDown={handleKeyPress}
         placeholder={placeholder}
         className="w-full outline-none h-inherit bg-inherit"
         disabled={disabled}
@@ -55,3 +64,6 @@ const Input: React.FC<InputProps> = ({
 };
 
 export default Input;
+function onKeyDownEnter() {
+  throw new Error("Function not implemented.");
+}
