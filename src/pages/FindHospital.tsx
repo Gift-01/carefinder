@@ -77,7 +77,7 @@ const FindHospital: React.FC = () => {
               onKeyDownEnter={HandleKeyPress}
               type="text"
               onChange={handleInputChange}
-              placeholder="Zipcode"
+              placeholder="City"
               className="w-full bg-[#fff] lg:w-[224px] h-[44px]"
             />
 

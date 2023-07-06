@@ -15,16 +15,20 @@ const HomeBase: React.FC = () => {
   const handleInputChange = (newValue: string) => {
     setValue(newValue);
   };
-  const HandlekeyPress = (e: { key: string; which: number }) => {
-    if (e.key === "Enter") {
-      // alert("You pressed enter!");
-      navigate("/findhospital/" + value);
-    }
-  };
+  // const HandlekeyPress = (e: { key: string; which: number }) => {
+  //   if (e.key === "Enter") {
+  //     // alert("You pressed enter!");
+  //     navigate("/findhospital/" + value);
+  //   }
+  // };
 
-  // function HandleKeyPress(): void {
-  //   throw new Error("Function not implemented.");
-  // }
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  function HandlekeyPress(e: { key: string }): void {
+    if (e.key === "Enter") {
+      navigate("/findhospital");
+    }
+    throw new Error("Function not implemented.");
+  }
 
   return (
     <div style={{ backgroundColor: "#E0E4EC " }}>

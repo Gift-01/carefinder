@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "./Form/ButtonLink";
+import HoverPopover from "./Form/PopOver";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,22 +61,7 @@ function NavBar() {
           >
             Find Hospital
           </Link>
-        </div>
-        <div className=" space-x-[19px]">
-          <Button
-            to="/login"
-            className="inline-flex items-center rounded-xl text-[20px] font-bold py-[7px] px-[31px] text-white font-display"
-            style={{ backgroundColor: "#08299B" }}
-          >
-            Login
-          </Button>
-          <Button
-            to="/signup"
-            className="inline-flex items-center rounded-xl text-[20px] font-bold py-[7px] px-[31px] text-white font-display"
-            style={{ backgroundColor: "#08299B" }}
-          >
-            Signup
-          </Button>
+          <HoverPopover children={undefined} />
         </div>
       </div>
     </nav>
